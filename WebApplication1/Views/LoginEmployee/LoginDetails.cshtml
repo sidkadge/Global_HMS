@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebApplication1.Models.LoginModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   
+  
+
+</head>
+<body>
+   
+
+    @using (Html.BeginForm("LoginDetails", "LoginEmployee", FormMethod.Get))
+    {
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-horizontal" style=" margin-bottom: 0rem;width:145%;background-image: url('../../image/login bg.jpg');">
+            <div class="col-lg-6" style="padding-bottom:30px; padding-top:18px; padding-right: 20.75rem;left:17%;">
+                <div class="container p-5" style="padding-top:7px;padding: 5rem!important;">
+
+                    <div style="border: double;border-radius: 0px;box-shadow: 2px 1px 6px 1px; background-color:white">
+                        <div class="text-center p-4" style="padding-bottom:20px">
+                            <img src="/image/RubyLogo.jpg" style="width: 240px;">
+                        </div>
+                        <form class="user">
+
+                            <div class="form-group m-5">
+                                <input type="text" class="form-control form-control-user" id="User_Name_id" name="User_Name" placeholder="Enter User Name" style="border: 1px solid #0d0d0e" required />
+                            </div>
+                            <div class="form-group m-5">
+                                <input type="text" class="form-control form-control-user" id="Password_id" name="Password" placeholder="Enter Password" style="border: 1px solid #0d0d0e" required>
+                            </div>
+                            <div class="text-center pb-5">
+                                <input type="submit" class="btn btn-primary" value="Login" />
+
+                            </div>
+
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    }
+
+    <link href="~/Content/css/sb-admin-2.css" rel="stylesheet" />
+    <link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

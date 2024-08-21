@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HMS_Global_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="OnlyTest_PatientDetails">
+          <Key>
+            <PropertyRef Name="GID" />
+          </Key>
+          <Property Name="GID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PID" Type="int" />
+          <Property Name="OPDID" Type="int" />
+          <Property Name="OPDID_Sr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Billing_Date" Type="date" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+          <Property Name="Lab_Total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Radiology_Total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Bill_Amount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Received" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Pending" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Patient_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Consultant_Charges" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Registration_Charges" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Update_flag" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="HMS_Global_ModelStoreContainer">
+          <EntitySet Name="OnlyTest_PatientDetails" EntityType="Self.OnlyTest_PatientDetails" Schema="HMS_Global" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HMS_Global_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="OnlyTest_PatientDetails">
+          <Key>
+            <PropertyRef Name="GID" />
+          </Key>
+          <Property Name="GID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PID" Type="Int32" />
+          <Property Name="OPDID" Type="Int32" />
+          <Property Name="OPDID_Sr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Billing_Date" Type="DateTime" Precision="0" />
+          <Property Name="Branch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Lab_Total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Radiology_Total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Bill_Amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Received" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Pending" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Patient_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Consultant_Charges" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Registration_Charges" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Update_flag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="HMS_Global_Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OnlyTest_PatientDetails" EntityType="Self.OnlyTest_PatientDetails" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HMS_Global_ModelStoreContainer" CdmEntityContainer="HMS_Global_Entities1">
+          <EntitySetMapping Name="OnlyTest_PatientDetails">
+            <EntityTypeMapping TypeName="HMS_Global_Model.OnlyTest_PatientDetails">
+              <MappingFragment StoreEntitySet="OnlyTest_PatientDetails">
+                <ScalarProperty Name="GID" ColumnName="GID" />
+                <ScalarProperty Name="PID" ColumnName="PID" />
+                <ScalarProperty Name="OPDID" ColumnName="OPDID" />
+                <ScalarProperty Name="OPDID_Sr" ColumnName="OPDID_Sr" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Billing_Date" ColumnName="Billing_Date" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+                <ScalarProperty Name="Lab_Total" ColumnName="Lab_Total" />
+                <ScalarProperty Name="Radiology_Total" ColumnName="Radiology_Total" />
+                <ScalarProperty Name="Bill_Amount" ColumnName="Bill_Amount" />
+                <ScalarProperty Name="Received" ColumnName="Received" />
+                <ScalarProperty Name="Pending" ColumnName="Pending" />
+                <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+                <ScalarProperty Name="Consultant_Charges" ColumnName="Consultant_Charges" />
+                <ScalarProperty Name="Registration_Charges" ColumnName="Registration_Charges" />
+                <ScalarProperty Name="Update_flag" ColumnName="Update_flag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

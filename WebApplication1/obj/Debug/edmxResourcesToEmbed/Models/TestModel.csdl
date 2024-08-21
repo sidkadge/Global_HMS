@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HMS_Global_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="OnlyTest_PatientDetails">
+    <Key>
+      <PropertyRef Name="GID" />
+    </Key>
+    <Property Name="GID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PID" Type="Int32" />
+    <Property Name="OPDID" Type="Int32" />
+    <Property Name="OPDID_Sr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Billing_Date" Type="DateTime" Precision="0" />
+    <Property Name="Branch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Purpose" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lab_Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Radiology_Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Bill_Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Received" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Pending" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Patient_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Consultant_Charges" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Registration_Charges" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Update_flag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="HMS_Global_Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="OnlyTest_PatientDetails" EntityType="Self.OnlyTest_PatientDetails" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HMS_Global_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="OnlyTest_PatientDetails">
+    <Key>
+      <PropertyRef Name="GID" />
+    </Key>
+    <Property Name="GID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PID" Type="int" />
+    <Property Name="OPDID" Type="int" />
+    <Property Name="OPDID_Sr" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Billing_Date" Type="date" />
+    <Property Name="Branch" Type="nvarchar" MaxLength="50" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="50" />
+    <Property Name="Lab_Total" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Radiology_Total" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Bill_Amount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Received" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Pending" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Patient_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Consultant_Charges" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Registration_Charges" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Update_flag" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="HMS_Global_ModelStoreContainer">
+    <EntitySet Name="OnlyTest_PatientDetails" EntityType="Self.OnlyTest_PatientDetails" Schema="HMS_Global" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

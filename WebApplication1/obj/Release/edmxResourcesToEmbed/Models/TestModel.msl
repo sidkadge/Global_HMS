@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HMS_Global_ModelStoreContainer" CdmEntityContainer="HMS_Global_Entities1">
+    <EntitySetMapping Name="OnlyTest_PatientDetails">
+      <EntityTypeMapping TypeName="HMS_Global_Model.OnlyTest_PatientDetails">
+        <MappingFragment StoreEntitySet="OnlyTest_PatientDetails">
+          <ScalarProperty Name="GID" ColumnName="GID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="OPDID" ColumnName="OPDID" />
+          <ScalarProperty Name="OPDID_Sr" ColumnName="OPDID_Sr" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Billing_Date" ColumnName="Billing_Date" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Lab_Total" ColumnName="Lab_Total" />
+          <ScalarProperty Name="Radiology_Total" ColumnName="Radiology_Total" />
+          <ScalarProperty Name="Bill_Amount" ColumnName="Bill_Amount" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="Pending" ColumnName="Pending" />
+          <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+          <ScalarProperty Name="Consultant_Charges" ColumnName="Consultant_Charges" />
+          <ScalarProperty Name="Registration_Charges" ColumnName="Registration_Charges" />
+          <ScalarProperty Name="Update_flag" ColumnName="Update_flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,191 @@
+﻿@model IEnumerable<WebApplication1.Models.IPDModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>IPDDischargesIndexnew</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Branch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient_ID_sr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IPD_ID_Sr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Admission_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientID_OPD_IPD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purpose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Advancce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Net_Payable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Received)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pending)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Test_Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bed_Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surgical_Proc_Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procedure_Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consultant_Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Other_Charges)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discharge_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bill_Amount)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Branch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient_ID_sr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPD_ID_Sr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doctor_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Admission_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientID_OPD_IPD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purpose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total_Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Advancce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Net_Payable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Received)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pending)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Test_Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bed_Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surgical_Proc_Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Procedure_Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consultant_Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Other_Charges)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Patient_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Discharge_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bill_Amount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
